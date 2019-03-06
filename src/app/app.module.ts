@@ -7,7 +7,8 @@ import { AboutComponent } from './about/about.component';
 import { LegalComponent } from './legal/legal.component';
 import { ConnectComponent } from './connect/connect.component';
 import { ContactComponent } from './contact/contact.component';
-
+import { AngularFireModule } from 'angularfire2';
+import { environment } from '../environments/environment';
 @NgModule({
   declarations: [
     AppComponent,
@@ -18,7 +19,8 @@ import { ContactComponent } from './contact/contact.component';
     ContactComponent
   ],
   imports: [
-    BrowserModule
+    BrowserModule,
+	AngularFireModule.initializeApp(environment.firebase)
   ],
   providers: [],
   bootstrap: [AppComponent]
