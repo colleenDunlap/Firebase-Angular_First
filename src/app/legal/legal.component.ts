@@ -29,15 +29,58 @@ export class LegalComponent implements OnInit {
 let worldSeries = chart.series.push(new am4maps.MapPolygonSeries());
 worldSeries.exclude = ["AQ"];
 worldSeries.useGeodata = true;
+worldSeries.data = [{
+  "id": "IR",
+  "name": "Iran",
+  "value": 100,
+  "fill": am4core.color("#8B0000")
+}, {
+  "id": "SA",
+  "name": "Saudi Arabia",
+  "value": 50,
+  "fill": am4core.color("#8B0000")
+}, {
+  "id": "SD",
+  "name": "Sudan",
+  "value": 50,
+  "fill": am4core.color("#8B0000")
+}, {
+  "id": "YE",
+  "name": "Yemen",
+  "value": 50,
+  "fill": am4core.color("#8B0000")
+}, {
+  "id": "SO",
+  "name": "Somalia",
+  "value": 50,
+  "fill": am4core.color("#8B0000")
+}, {
+  "id": "NG",
+  "name": "Nigeria",
+  "value": 50,
+  "fill": am4core.color("#8B0000")
+}, {
+  "id": "SY",
+  "name": "Syrian Arab Republic",
+  "value": 50,
+  "fill": am4core.color("#8B0000")
+}, {
+  "id": "IQ",
+  "name": "Iraq",
+  "value": 50,
+  "fill": am4core.color("#8B0000")
+}];
+
 
 let polygonTemplate = worldSeries.mapPolygons.template;
 polygonTemplate.tooltipText = "{name}";
 polygonTemplate.fill = chart.colors.getIndex(0);
 polygonTemplate.nonScalingStroke = true;
-
+polygonTemplate.propertyFields.fill = "fill";
 // Hover state
 let hs = polygonTemplate.states.create("hover");
-hs.properties.fill = am4core.color("#367B25");
+hs.properties.fill = am4core.color("#555555");
+
 this.chart = chart;
 
     });
