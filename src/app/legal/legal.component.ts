@@ -31,44 +31,74 @@ worldSeries.exclude = ["AQ"];
 worldSeries.useGeodata = true;
 worldSeries.data = [{
   "id": "IR",
-  "name": "Iran",
-  "value": 100,
+  "name": "Iran\nPunishable by Death",
+  "title": "Punishable by Death",
   "fill": am4core.color("#8B0000")
 }, {
   "id": "SA",
-  "name": "Saudi Arabia",
-  "value": 50,
+  "name": "Saudi Arabia\nPunishable by Death",
+  "title": "Punishable by Death",
   "fill": am4core.color("#8B0000")
 }, {
   "id": "SD",
-  "name": "Sudan",
-  "value": 50,
+  "name": "Sudan\nPunishable by Death",
+  "title":"Punishable by Death",
   "fill": am4core.color("#8B0000")
 }, {
   "id": "YE",
-  "name": "Yemen",
-  "value": 50,
+  "name": "Yemen\nPunishable by Death",
+  "title": "Punishable by Death",
   "fill": am4core.color("#8B0000")
 }, {
   "id": "SO",
-  "name": "Somalia",
-  "value": 50,
+  "name": "Somalia\nPunishable by Death in areas under Sharia Law",
+  "title": "Punishable by Death in areas under Sharia Law",
   "fill": am4core.color("#8B0000")
 }, {
   "id": "NG",
-  "name": "Nigeria",
-  "value": 50,
+  "name": "Nigeria\nPunishable by Death in areas under Sharia Law",
+  "title": "Punishable by Death in areas under Sharia Law",
   "fill": am4core.color("#8B0000")
 }, {
   "id": "SY",
-  "name": "Syrian Arab Republic",
-  "value": 50,
+  "name": "Syrian Arab Republic\nPunishable by Death enforced by Insurgents",
+  "title": "Punishable by Death enforced by Insurgents",
   "fill": am4core.color("#8B0000")
 }, {
   "id": "IQ",
-  "name": "Iraq",
-  "value": 50,
+  "name": "Iraq\nPunishable by Death enforced by Insurgents",
+  "title": "Punishable by Death enforced by Insurgents",
   "fill": am4core.color("#8B0000")
+},
+{
+  "id": "DZ",
+  "name":"Algeria\nUp to Two Years Imprisonment",
+  "fill":am4core.color("#FF6347")
+},
+{
+  "id": "AO",
+  "name":"Angola\nUp to Three Years Internment",
+  "fill":am4core.color("#FF6347")
+},
+{
+  "id": "BW",
+  "name":"Botswana\nUp to Five Years Internment",
+  "fill":am4core.color("#FF4500")
+},
+{
+  "id": "BI",
+  "name":"Burundi\nUp to Two Years Internment",
+  "fill":am4core.color("#FF6347")
+},
+{
+  "id": "CM",
+  "name":"Cameroon\nUp to Five Years Imprisonment",
+  "fill":am4core.color("#FF4500")
+},
+{
+  "id": "TZ",
+  "name":"United Republic of Tanzania\nUp to Life Imprisonment",
+  "fill":am4core.color("#FF0000")
 }];
 
 
