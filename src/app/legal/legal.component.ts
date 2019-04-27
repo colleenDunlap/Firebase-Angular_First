@@ -37,7 +37,6 @@ worldSeries.data = [{
 }, {
   "id": "SA",
   "name": "Saudi Arabia\nPunishable by Death",
-  "title": "Punishable by Death",
   "fill": am4core.color("#8B0000")
 }, {
   "id": "SD",
