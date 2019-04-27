@@ -1,7 +1,9 @@
 import { BrowserModule } from '@angular/platform-browser';
 import { NgModule } from '@angular/core';
-import {FormsModule} from '@angular/forms';
+import {FormsModule, ReactiveFormsModule} from '@angular/forms';
 import{Routes, RouterModule} from '@angular/router';
+import { AngularFireModule } from '@angular/fire';
+import { AngularFirestoreModule, FirestoreSettingsToken } from '@angular/fire/firestore'; //add FirestoreSettingsToken when you get this firestore timestampsInSnapshots warning
 
 import { AppComponent } from './app.component';
 import { NavbarComponent } from './navbar/navbar.component';
@@ -9,10 +11,11 @@ import { AboutComponent } from './about/about.component';
 import { LegalComponent } from './legal/legal.component';
 import { ConnectComponent } from './connect/connect.component';
 import { ContactComponent } from './contact/contact.component';
-import { AngularFireModule } from 'angularfire2';
+//import { AngularFireModule } from 'angularfire2';
 import { environment } from '../environments/environment';
 import { HomeComponent } from './home/home.component';
 import { AlertsComponent } from './alerts/alerts.component';
+
 
 const appRoutes: Routes=[
   {path: '', component: HomeComponent},
@@ -35,7 +38,10 @@ const appRoutes: Routes=[
   imports: [
     BrowserModule,
     RouterModule.forRoot(appRoutes),
-	AngularFireModule.initializeApp(environment.firebase)
+    FormsModule,
+    ReactiveFormsModule,
+    AngularFireModule.initializeApp(environment.firebase),
+    AngularFirestoreModule
   ],
   providers: [],
   bootstrap: [AppComponent]
