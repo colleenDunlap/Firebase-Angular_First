@@ -1,12 +1,12 @@
 
 <form [formGroup]="myForm" [hidden]="success" (ngSubmit)="submitHandler()">
-  <h4>email</h4>
+  <h4>Title</h4>
   <input formControlName="title">
   <br>
   <span *ngIf="title.invalid && title.touched">
       This Field is Required
   </span>
-  <h4>message</h4>
+  <h4>Message</h4>
   <textarea formControlName="message"></textarea>
   <br>
   <span *ngIf="message.invalid && message.touched">
@@ -14,11 +14,11 @@
   </span>
   <button [disabled]="myForm.invalid">Let's Do it!</button>
 </form>
-<div *ngIf="success">
-    Yay! We received your submission
-</div>
+<h2>Freedom Forum</h2>
 <ul>
     <li *ngFor="let item of items | async">
-        <pre>{{ item | json }}</pre>
+      
+      <p>{{item.title}}</p>  
+      <pre>{{item.message}}</pre>
     </li>
 </ul>
