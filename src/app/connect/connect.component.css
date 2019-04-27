@@ -7,7 +7,23 @@ p{
 h2{
     text-align: center
 }
+h3{
+    text-align:center;
+}
 li{
     width: 100%
 
+}
+div{
+    align-content: center;
+}
+input{
+    width: 80%;
+    align-content: center;
+}
+textarea{
+    width: 80%;
+    align-content: center;
+}
+button{
 }

@@ -1,5 +1,9 @@
-
-<form [formGroup]="myForm" [hidden]="success" (ngSubmit)="submitHandler()">
+<div>
+<form [formGroup]="myForm"  (ngSubmit)="submitHandler()">
+  <br>
+    <div class = "container-fluid" style="background-color:#ffff66;">
+  <h2>Connect in the Forum!</h2>
+  </div>
   <h4>Title</h4>
   <input formControlName="title">
   <br>
@@ -12,13 +16,21 @@
   <span *ngIf="message.invalid && message.touched">
       This Field is Required
   </span>
-  <button [disabled]="myForm.invalid">Submit</button>
+  <br>
+  <button class="btn btn-primary" [disabled]="myForm.invalid">Post</button>
+  <span *ngIf = "message.invalid && title.invalid">
+    Must include Title and Message
+  </span>
 </form>
-<h2>Freedom Forum</h2>
+</div>
+
+<h2>Forum</h2>
+
 <ul>
     <li *ngFor="let item of items | async">
       
       <p>{{item.title}}</p>  
       <pre>{{item.message}}</pre>
+      <button class="btn btn-primary">Reply</button>
     </li>
 </ul>

@@ -26,8 +26,8 @@ export class ConnectComponent implements OnInit {
       message:['', Validators.required]
     })
     //this.myForm.valueChanges.subscribe(console.log);
-    const collection: AngularFirestoreCollection<Item> = this.afs.collection('posts');
-    this.items = this.afs.collection('posts').valueChanges();
+    const collection: AngularFirestoreCollection<Item> = this.afs.collection('postreply');
+    this.items = this.afs.collection('postreply').valueChanges();
   }
   async submitHandler() {
     this.loading = true;
@@ -35,7 +35,7 @@ export class ConnectComponent implements OnInit {
     const formValue = this.myForm.value;
 
     try {
-      await this.afs.collection('posts').add(formValue);
+      await this.afs.collection('postreply').add(formValue);
       this.success = true;
     } catch(err) {
       console.error(err)
